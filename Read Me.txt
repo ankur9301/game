@@ -1,0 +1,37 @@
+<<<Installing Pygame on Windows>>>
+
+    pip install pygame
+
+<<<Installing Pygame on Mac for Python 3>>>
+
+The following is taken from a Pygame Issue Tracker thread.
+
+---First install the Mercurial version control system:
+
+    brew install mercurial
+
+---Then do the same for the git version control system, which is needed by a dependency package:
+
+    brew install git
+
+---Now install all the dependencies of Pygame:
+
+    brew install sdl sdl_image sdl_mixer sdl_ttf smpeg portmidi
+
+---Almost there! To install Pygame now, we will use pip. Go and get it by running:
+
+    /usr/local/share/python3/easy_install pip
+
+---And now, finally:
+
+    /usr/local/share/python3/pip install hg+http://bitbucket.org/pygame/pygame
+
+---After this is done, verify that it is working:
+
+    python3
+    >>> import pygame
+    >>> pygame.init()
+    (6, 0)
+    >>> pygame.display.set_mode((800, 600))
+    <Surface(800x600x32 SW)>
+    >>> raise SystemExit
